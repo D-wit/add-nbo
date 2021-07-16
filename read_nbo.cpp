@@ -7,5 +7,5 @@ uint32_t read_nbo(FILE *fp)
     fread(&temp_bin,sizeof(uint32_t),1,fp); //read bin file
     a = temp_bin; //buffer to variable
     fclose(fp);
-    return ntohl(a); //Little_Endian to NBO
+    return htonl(a); //Little_Endian to NBO
 }
